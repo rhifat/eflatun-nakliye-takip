@@ -1,0 +1,21 @@
+﻿@page
+@inherits EflatunNakliyeTakip.Web.Pages.EflatunNakliyeTakipPage
+@using EflatunNakliyeTakip.Web.Pages.Giderler
+@using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@model EditModalModel
+
+@{ 
+    Layout = null;
+}
+
+<abp-dynamic-form abp-model="Gider" data-ajaxForm="true" asp-page="/Giderler/EditModal">
+    <abp-modal>
+        <abp-modal-header title="@L["Update"].Value"></abp-modal-header>
+        <abp-modal-body>
+            <abp-input asp-for="Id" />
+            <abp-form-content />
+        </abp-modal-body>
+        <abp-modal-footer buttons="@(AbpModalButtons.Cancel|AbpModalButtons.Save)"></abp-modal-footer>
+    </abp-modal>
+
+</abp-dynamic-form>

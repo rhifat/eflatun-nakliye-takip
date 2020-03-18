@@ -1,0 +1,41 @@
+﻿@page
+@inherits EflatunNakliyeTakip.Web.Pages.EflatunNakliyeTakipPage
+@model EflatunNakliyeTakip.Web.Pages.Giderler.IndexModel
+@section scripts
+{
+    <abp-script src="/Pages/Gelirler/index.js" />
+}
+<abp-card>
+    <abp-card-header>
+        <abp-row>
+            <abp-column size-md="_6">
+                <h2>@L["Gelir"]</h2>
+            </abp-column>
+            <abp-column size-md="_6" class="text-right">
+                <abp-button id="YeniGelirButton"
+                            text="@L["YeniGelir"].Value"
+                            icon="plus"
+                            button-type="Primary" />
+            </abp-column>
+        </abp-row>
+    </abp-card-header>
+    <abp-card-body>
+        <abp-table striped-rows="true" id="GelirlerTable">
+            <thead>
+                <tr>
+                    <th>@L["Eylemler"]</th>
+                    <th>@L["IslemTarihi"]</th>
+                    <th>@L["Vasita"]</th>
+                    <th>@L["YukCikisNoktasi"]</th>
+                    <th>@L["YukVarisNoktasi"]</th>
+                    <th>@L["YuklenenFirma"]</th>
+                    <th>@L["GoturulecekFirma"]</th>
+                    <th>@L["YukTonaj"]</th>
+                    <th>@L["VasitaKm"]</th>                    
+                    <th>@L["Miktar"]</th>
+
+                </tr>
+            </thead>
+        </abp-table>
+    </abp-card-body>
+</abp-card>
